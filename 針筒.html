@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: '微軟正黑體';
+      box-sizing: border-box;
+    }
+
+    .syringe {
+      width: 1050px;
+      height: 160px;
+      background: linear-gradient(white, lightgray, white);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 0 15px 15px 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .syringe::before {
+      content: "";
+      width: 100px;
+      height: 200px;
+      background: linear-gradient(white, lightgray, white);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 15px 15px 15px 15px;
+      position: absolute;
+      left: -9.8%;
+      top: -13.8%;
+    }
+
+    .syringe::after {
+      content: "";
+      width: 170px;
+      height: 1px;
+      background: gray;
+      position: absolute;
+      left: 100%;
+      top: 50%;
+    }
+
+    .tube {
+      width: 100px;
+      height: 200px;
+      background: black;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .tube::before {
+      content: "";
+      color: gray;
+      width: 400px;
+      height: 198px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background: linear-gradient(white, lightgray, white);
+      position: absolute;
+      left: -400%;
+      display: inline-block;
+      word-break: break-all;
+    }
+
+    .tube::after {
+      content: "";
+      color: gray;
+      width: 400px;
+      height: 198px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background: linear-gradient(lightyellow 5%, palegoldenrod 50%, lightyellow 95%);
+      /* background: lightgoldenrodyellow; */
+      position: absolute;
+      left: 100%;
+      display: inline-block;
+    }
+
+    .text {
+      width: 200px;
+      height: 20px;
+      position: absolute;
+      left: -395%;
+      top: 85%;
+      color: gray;
+      font-size: 25px;
+      z-index: 3;
+    }
+
+    .text::before {
+      content: "｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜";
+      width: 400px;
+      height: 20px;
+      position: absolute;
+      top: -873%;
+      color: gray;
+    }
+
+    .text::after {
+      content: "｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜｜";
+      width: 400px;
+      height: 20px;
+      position: absolute;
+      left: 250%;
+      top: -873%;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="syringe">
+    <div class="tube">
+      <div class="text">
+        <p>Made in Taiwan</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
